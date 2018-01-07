@@ -8,7 +8,6 @@ import { routerMiddleware, ConnectedRouter } from 'react-router-redux'
 import createHistory from 'history/createHashHistory'
 //import createHistory from 'history/createBrowserHistory'
 import Main from './containers/main';
-import './images/regnskab-baggrund.png'
 import './main.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome-webpack'
@@ -22,7 +21,7 @@ const middleware = [
   logger
 ]
 
-const store = createStore(virkrReducers, {}, applyMiddleware(...middleware));
+const store = createStore(reducers, {}, applyMiddleware(...middleware));
 
 ReactDOM.render(
   <Provider store={store}>
